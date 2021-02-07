@@ -10,7 +10,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-    if: github.event_name == issues
+  comment:
+    if: github.event_name === 'issues' 
     runs-on: ubuntu-latest
     steps: 
       - name: Add funny comment
